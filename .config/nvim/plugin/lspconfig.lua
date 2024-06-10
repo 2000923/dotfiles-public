@@ -79,6 +79,13 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.tsserver.setup {
+  on_attach = on_attach,
+  filetypes = { "yml", "yaml" },
+  cmd = { "ansible-language-server", "--stdio" },
+  capabilities = capabilities
+}
+
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -117,6 +124,11 @@ nvim_lsp.cssls.setup {
 }
 
 nvim_lsp.astro.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+nvim_lsp.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }
